@@ -1,6 +1,5 @@
 public class Consultar {
-    public static void mostrarSaldo(double saldo) {
-        System.out.println("Tu saldo actual es: $" + saldo);
+    public static void mostrarSaldo(Cuenta cuenta) {
+        System.out.println("Tu feria actual es de: $" + cuenta.getSaldo());
     }
 }
-
