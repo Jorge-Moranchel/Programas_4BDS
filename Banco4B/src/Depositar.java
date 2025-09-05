@@ -1,13 +1,11 @@
 public class Depositar {
-    public static double realizarDeposito(double saldoActual, double cantidad) {
+    public static void realizarDeposito(Cuenta cuenta, double cantidad) {
         if (cantidad > 0) {
-            double nuevoSaldo = saldoActual + cantidad;
-            System.out.println("Depósito exitoso: $" + cantidad);
-            System.out.println("Nuevo saldo: $" + nuevoSaldo);
-            return nuevoSaldo;
-        }else {
-            System.out.println("Esta mal la cantidad debe ser mayor a cero");
-            return saldoActual;
+            cuenta.depositar(cantidad);
+            System.out.println("Deposito exitoso: $" + cantidad);
+            System.out.println("Nueva feria: $" + cuenta.getSaldo());
+        } else {
+            System.out.println("No debes de ingresar numeros negativos");
         }
     }
 }
